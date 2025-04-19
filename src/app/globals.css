@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-rgb: 0, 0, 0;
+  }
+}
+
+html {
+  transition: background-color 0.8s ease;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  transition: background-color 0.8s ease, color 0.8s ease;
+}
+
+/* Theme transitions */
+body,
+body * {
+  transition-property: background-color, color, border-color, fill, stroke;
+  transition-timing-function: ease;
+  transition-duration: 0.5s;
+}
+
+/* Mobile Menu Styles */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.hamburger .bar1,
+.hamburger .bar2,
+.hamburger .bar3 {
+  width: 25px;
+  height: 2px;
+  margin: 3px 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.bar-light {
+  background-color: #4b5563; /* gray-600 */
+}
+
+.bar-dark {
+  background-color: #d1d5db; /* gray-300 */
+}
+
+.hamburger.active .bar1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active .bar2 {
+  opacity: 0;
+}
+
+.hamburger.active .bar3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.mobile-menu-content {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  margin-top: 0;
+  padding-bottom: 0;
+}
+
+.mobile-menu-content.show {
+  max-height: 270px;
+  opacity: 1;
+  transform: translateY(0);
+  margin-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+/* Add a smooth transition for the menu items */
+.mobile-menu-content a,
+.mobile-menu-content button {
+  transition: all 0.5s ease-in-out;
+}
+
+/* Theme transition styles */
+header {
+  transition: background-color 0.5s ease;
+}
+
+.text-gray-900,
+.text-gray-600,
+.text-gray-300,
+.text-white {
+  transition: color 0.5s ease;
+}
+
+@media (min-width: 768px) {
+  .mobile-controls {
+    display: none;
+  }
+}
+
+.btn-custom {
+  @apply bg-[#F5F5F5] 
+         dark:bg-[#1C1C21] 
+         border-2 
+         border-[#D0D0D0] 
+         dark:border-[#696969] 
+         rounded-[50px] 
+         px-4 
+         py-2 
+         transition-colors duration-200;
+
+  @apply hover:bg-[#E0E0E0] 
+         dark:hover:bg-[#2A2A2A];
+}
