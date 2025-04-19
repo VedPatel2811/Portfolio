@@ -5,6 +5,14 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 
+type Project = {
+  title: string;
+  description: string;
+  technologies: string[];
+  githubLink: string;
+  demoLink?: string;
+};
+
 const skills = {
   "Programming Languages": [
     { name: "Java", docs: "https://docs.oracle.com/javase/" },
@@ -19,36 +27,17 @@ const skills = {
     { name: "TypeScript", docs: "https://www.typescriptlang.org/docs/" },
     { name: "SQL", docs: "https://www.w3schools.com/sql/" },
   ],
-  "Frontend Technologies": [
-    { name: "React.js", docs: "https://react.dev/learn" },
+  "Web Technologies and Frameworks": [
+    { name: "React", docs: "https://react.dev/learn" },
     { name: "Next.js", docs: "https://nextjs.org/docs" },
-    { name: "Angular", docs: "https://angular.io/docs" },
-    {
-      name: "React Native",
-      docs: "https://reactnative.dev/docs/getting-started",
-    },
+    { name: "Node.js", docs: "https://nodejs.org/en/docs/" },
+    { name: "Express.js", docs: "https://expressjs.com/en/5x/api.html" },
     { name: "Tailwind CSS", docs: "https://tailwindcss.com/docs/" },
     { name: "HTML", docs: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
     { name: "CSS", docs: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
-  ],
-  "Backend Technologies": [
     { name: "ASP.NET", docs: "https://learn.microsoft.com/en-us/aspnet/core/" },
-    { name: "Node.js", docs: "https://nodejs.org/en/docs/" },
-    { name: "Express.js", docs: "https://expressjs.com/en/5x/api.html" },
-    { name: "Django", docs: "https://docs.djangoproject.com/en/stable/" },
     { name: "Auth0", docs: "https://auth0.com/docs/" },
     { name: "EmailJS", docs: "https://www.emailjs.com/docs/" },
-  ],
-  "Embedded & Real-Time Systems": [
-    { name: "QNX Momentics", docs: "https://www.qnx.com/developers/docs/7.1/" },
-    {
-      name: "VirtualBox",
-      docs: "https://www.virtualbox.org/wiki/Documentation",
-    },
-    {
-      name: "RTOS",
-      docs: "https://www.qnx.com/developers/docs/7.1/#com.qnx.doc.neutrino.getting_started/topic/about_RTOS.html",
-    },
   ],
   "DevOps & Cloud": [
     { name: "Docker", docs: "https://docs.docker.com/" },
@@ -60,18 +49,17 @@ const skills = {
       docs: "https://www.redhat.com/en/topics/devops/what-cicd-pipeline",
     },
   ],
-  "Database & More": [
+  "Database & Tools": [
     { name: "PostgreSQL", docs: "https://www.postgresql.org/docs/" },
     { name: "MySQL", docs: "https://dev.mysql.com/doc/" },
     { name: "MongoDB", docs: "https://www.mongodb.com/docs/" },
-    { name: "Firebase", docs: "https://firebase.google.com/docs" },
-  ],
-  "Tools & Platforms": [
     { name: "Postman", docs: "https://learning.postman.com/docs/" },
     { name: "Jira", docs: "https://www.atlassian.com/software/jira/guides" },
     { name: "Git", docs: "https://git-scm.com/doc" },
     { name: "GitHub", docs: "https://docs.github.com/en" },
-    { name: "GitLab", docs: "https://docs.gitlab.com/" },
+    { name: "QNX Momentics", docs: "https://www.qnx.com/developers/docs/7.1/" },
+    { name: "Power BI", docs: "https://learn.microsoft.com/en-us/power-bi/" },
+    { name: "RapidMiner", docs: "https://rapidminer.com/docs/" },
   ],
 };
 
@@ -85,9 +73,19 @@ const experience = [
       "Built the frontend using React and JavaScript, ensuring an intuitive and responsive user interface.",
       "Designed and integrated Auth0-based authentication to enforce strict access controls and security compliance.",
       "Containerized applications using Docker and orchestrated deployments on a Minikube Kubernetes cluster for scalable and reliable service management.",
-      "Collaborated in an Agile development environment, conducting code reviews and version control via Git/GitHub.",
-      "Contributed to backend services using Java, ensuring seamless integration with frontend components.",
-      "Assisted in setting up CI/CD pipelines to automate testing and deployment processes."
+      "Assisted in setting up CI/CD pipelines to automate testing and deployment processes.",
+    ],
+  },
+  {
+    title: "Backend Engineer Intern",
+    company: "Hitech Digital Solutions",
+    period: "May 2022 - November 2022",
+    responsibilities: [
+      "Built and maintained backend services for an admin dashboard using Node.js, implementing role-based access control (RBAC) to manage permissions for 1,000+ employees.",
+      "Optimized MongoDB queries, reducing API response times by 40% and improving system reliability.",
+      "Fixed authentication bugs and data sync issues, ensuring secure and consistent user access.",
+      "Collaborated with frontend and QA teams to streamline API integrations and deployment workflows.",
+      "Contributed to code reviews and documented backend processes to assist junior team members.",
     ],
   },
 ];
@@ -109,18 +107,28 @@ const education = [
   },
 ];
 
-const projects = [
+const projects: Project[] = [
   {
     title: "CSE Marketplace",
-    description: "A modern web application built with React and JavaScript",
-    technologies: ["React", "JavaScript", "Kubernetes", "Docker", "Auth0"],
+    description:
+      "A modern web application built with React and JavaScript, featuring Auth0 for secure authentication, containerized with Minikube for local Kubernetes deployment.",
+    technologies: [
+      "React",
+      "JavaScript",
+      "Java",
+      "Auth0",
+      "Minikube",
+      "Kubernetes",
+      "Docker",
+    ],
     githubLink: "https://github.com/VedPatel2811/Kubernetes",
   },
   {
-    title: "Project 2",
-    description: "A RESTful API service with Node.js and Express",
-    technologies: ["Node.js", "Express", "MongoDB"],
-    githubLink: "https://github.com/yourusername/project2",
+    title: "NYPD Complaint Data Analysis",
+    description:
+      "A data analytics project leveraging machine learning and Power BI to uncover crime patterns in NYPD complaint records.",
+    technologies: ["Power BI", "RapidMiner", "Python", "Weka", "Word", "Excel"],
+    githubLink: "https://github.com/VedPatel2811/NYPD-Complaint-Data-Analysis",
   },
 ];
 
@@ -138,7 +146,7 @@ export default function Home() {
             className="text-4xl md:text-5xl font-bold mb-4"
           >
             Hi, I'm{" "}
-            <span className="text-blue-600 dark:text-blue-400">Ved Patel</span>
+            <span className="text-blue-600 dark:text-blue-600">Ved Patel</span>
           </motion.h1>
           <div className="text-2xl md:text-3xl font-semibold mb-4 h-12 flex justify-center md:justify-start">
             <Typewriter
@@ -163,7 +171,7 @@ export default function Home() {
           </p>
           <div className="flex justify-center md:justify-start">
             <a
-              href="/resume.pdf"
+              href="/Ved_Patel_CV.pdf"
               download
               className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors"
             >
@@ -222,7 +230,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="bg-white dark:bg-[#1C1C21] p-6 rounded-lg shadow-md"
+              className="bg-[#F5F5F5] dark:bg-[#141414] p-6 rounded-lg shadow-md"
             >
               <h3 className="text-xl border-b-2 p-2 font-semibold mb-4 ">
                 {category}
@@ -231,7 +239,7 @@ export default function Home() {
                 {items.map((skill) => (
                   <li
                     key={skill.name}
-                    className="text-gray-600 dark:text-gray-300"
+                    className="text-gray-700 dark:text-gray-300"
                   >
                     <a
                       href={skill.docs}
@@ -259,7 +267,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="bg-white dark:bg-[#1C1C21] p-6 rounded-lg shadow-md"
+              className="bg-[#F5F5F5] dark:bg-[#141414] p-6 rounded-lg shadow-md"
             >
               <h3 className="text-xl border-b-2 p-2 font-semibold mb-4">
                 {exp.title}
@@ -290,7 +298,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="bg-white dark:bg-[#1C1C21] p-6 rounded-lg shadow-md"
+              className="bg-[#F5F5F5] dark:bg-[#141414] p-6 rounded-lg shadow-md"
             >
               <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
@@ -306,14 +314,26 @@ export default function Home() {
                   </span>
                 ))}
               </div>
-              <a
-                href={project.githubLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-gray-800 dark:bg-gray-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
-              >
-                View on GitHub
-              </a>
+              <div className="flex gap-4">
+                <a
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center bg-gray-800 dark:bg-gray-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors hover:bg-gray-700 dark:hover:bg-gray-600"
+                >
+                  View on GitHub
+                </a>
+                {project.demoLink && (
+                  <a
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors hover:bg-blue-700"
+                  >
+                    Live Demo
+                  </a>
+                )}
+              </div>
             </motion.div>
           ))}
         </div>
@@ -329,7 +349,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="bg-white dark:bg-[#1C1C21] p-6 rounded-lg shadow-md"
+              className="bg-[#F5F5F5] dark:bg-[#141414] p-6 rounded-lg shadow-md"
             >
               <h3 className="text-xl border-b-2 p-2 font-semibold mb-4">
                 <a

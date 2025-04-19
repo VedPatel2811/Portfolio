@@ -3,36 +3,76 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const projects = [
+type Project = {
+  title: string;
+  description: string;
+  technologies: string[];
+  githubLink: string;
+  demoLink?: string;
+};
+
+const projects: Project[] = [
   {
-    title: "E-commerce Platform",
+    title: "CSE Marketplace",
     description:
-      "A full-featured e-commerce platform built with Next.js, featuring product listings, shopping cart, and secure checkout.",
+      "A modern web application built with React and JavaScript, featuring Auth0 for secure authentication, containerized with Minikube for local Kubernetes deployment. The backend utilized Java to dynamically convert YAML configuration files to JSON, streamlining data processing and integration.",
     technologies: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "MongoDB",
-      "Stripe",
+      "React",
+      "JavaScript",
+      "Java",
+      "Auth0",
+      "Minikube",
+      "Kubernetes",
+      "Docker",
     ],
-    githubLink: "https://github.com/yourusername/ecommerce",
-    demoLink: "https://ecommerce-demo.com",
+    githubLink: "https://github.com/VedPatel2811/Kubernetes",
   },
   {
-    title: "Task Management App",
+    title: "Full-Stack Slider App with Multi-Platform Support",
     description:
-      "A collaborative task management application with real-time updates and team features.",
-    technologies: ["React", "Node.js", "Express", "Socket.io", "MongoDB"],
-    githubLink: "https://github.com/yourusername/task-manager",
-    demoLink: "https://task-manager-demo.com",
+      "Led a 4-member team to build a Java-based application with role-based auth (Admin, REST API users, JSF users) across web (React/JSF), mobile (Kotlin), and desktop (Java Swing).",
+    technologies: [
+      "React (canvas animations)",
+      "Java",
+      "Java Swing",
+      "Kotlin",
+      "RESTful APIs",
+      "MySQL",
+      "Selenium",
+      "JUnit",
+    ],
+    githubLink: "https://github.com/VedPatel2811/Slider",
   },
   {
-    title: "Weather Dashboard",
+    title: "Connect-4 Game",
     description:
-      "A weather dashboard that displays current and forecasted weather data with interactive maps.",
-    technologies: ["React", "OpenWeather API", "Mapbox", "Chart.js"],
-    githubLink: "https://github.com/yourusername/weather-dashboard",
-    demoLink: "https://weather-dashboard-demo.com",
+      "Led a 2-member team to develop an object-oriented Java Swing application implementing core DSA principles for a cross-device Connect-4 game with socket-programmed multiplayer.",
+    technologies: [
+      "Java",
+      "Java Swing",
+      "Object-Oriented Programming",
+      "Socket Programming",
+      "DSA",
+      "JUnit ",
+    ],
+    githubLink: "https://github.com/VedPatel2811/Connect4",
+  },
+  {
+    title: "Deals Finder",
+    description:
+      "A dynamic web application that allows customers to subscribe/unsubscribe to food delivery services and browse exclusive deals. Implemented complex ViewModels to manage user subscriptions and deals with real-time database updates.",
+    technologies: [
+      "ASP.NET Core MVC",
+      "C#",
+      "Entity Framework",
+      "LINQ Queries",
+      "SQL Database",
+      "Azure",
+      "Razor Views",
+      "CSS",
+    ],
+    githubLink: "https://github.com/VedPatel2811/Deals-Finder-Web-App",
+    demoLink: "https://vedpatel-lab5.azurewebsites.net/",
   },
 ];
 
@@ -65,7 +105,7 @@ export default function ProjectsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
+            className="bg-[#F5F5F5] dark:bg-[#141414] p-6 rounded-lg shadow-md"
           >
             <h2 className="text-2xl font-semibold mb-2">{project.title}</h2>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
@@ -92,14 +132,16 @@ export default function ProjectsPage() {
               >
                 View on GitHub
               </a>
-              <a
-                href={project.demoLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors hover:bg-blue-700"
-              >
-                Live Demo
-              </a>
+              {project.demoLink && (
+                <a
+                  href={project.demoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors hover:bg-blue-700"
+                >
+                  Live Demo
+                </a>
+              )}
             </div>
           </motion.div>
         ))}

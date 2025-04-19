@@ -21,7 +21,7 @@ html {
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
-  transition: background-color 0.8s ease, color 0.8s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 /* Theme transitions */
@@ -118,8 +118,8 @@ header {
 }
 
 .btn-custom {
-  @apply bg-[#F5F5F5] 
-         dark:bg-[#1C1C21] 
+  @apply bg-white 
+         dark:bg-[#141414] 
          border-2 
          border-[#D0D0D0] 
          dark:border-[#696969] 

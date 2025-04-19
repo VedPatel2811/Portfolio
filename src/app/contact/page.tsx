@@ -60,7 +60,7 @@ export default function ContactPage() {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
+          className="bg-white dark:bg-[#141414] p-6 rounded-lg shadow-md"
         >
           <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -79,7 +79,7 @@ export default function ContactPage() {
                 onChange={handleChange}
                 required
                 placeholder="Full Name"
-                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white focus:outline-none focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-[#141414] dark:text-white focus:outline-none focus:border-transparent"
               />
             </div>
 
@@ -98,7 +98,7 @@ export default function ContactPage() {
                 onChange={handleChange}
                 required
                 placeholder="your@gmail.com"
-                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white focus:outline-none focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-[#141414] dark:text-white focus:outline-none focus:border-transparent"
               />
             </div>
 
@@ -117,7 +117,7 @@ export default function ContactPage() {
                 placeholder="Your Message here..."
                 required
                 rows={4}
-                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white focus:outline-none focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-[#141414] dark:text-white focus:outline-none focus:border-transparent"
               />
             </div>
 
@@ -146,7 +146,7 @@ export default function ContactPage() {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
+          className="bg-white dark:bg-[#141414] p-6 rounded-lg shadow-md"
         >
           <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
           <div className="space-y-4">
