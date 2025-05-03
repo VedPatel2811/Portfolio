@@ -102,7 +102,7 @@ const education = [
     details: [
       "Major in Computer Science",
       "Relevant Coursework: BI and Data Analytics, Network Programming, Java Application Programming, ASP.NET Core, C++ Programming, Software Design and Testing, Real-time Programming",
-      "GPA: 3.8/4.0",
+      "GPA: 3.54/4.0",
     ],
   },
 ];
