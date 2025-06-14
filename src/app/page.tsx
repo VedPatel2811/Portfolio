@@ -130,10 +130,24 @@ const projects: Project[] = [
     demoLink: "https://vedpatel-lab5.azurewebsites.net/",
   },
   {
+    title: "Book Tracking Web App",
+    description:
+      "Built a full-stack inventory management system for a local book library to manage over 1,000 books and customer loan records. Implemented advanced search and sort functionality to streamline book retrieval based on user queries. The system supports managing customer profiles, loan statuses, and book availability. Developed using PHP, JavaScript, HTML/CSS, and MySQL, delivering a responsive and functional web interface.",
+    technologies: ["PHP", "JavaScript", "HTML", "CSS", "MySQL"],
+    githubLink: "https://github.com/VedPatel2811/NYPD-Complaint-Data-Analysis",
+  },
+  {
     title: "NYPD Complaint Data Analysis",
     description:
       "A data analytics project leveraging machine learning and Power BI to uncover crime patterns in NYPD complaint records.",
     technologies: ["Power BI", "RapidMiner", "Python", "Weka", "Word", "Excel"],
+    githubLink: "https://github.com/VedPatel2811/NYPD-Complaint-Data-Analysis",
+  },
+   {
+    title: "Linux Administrative Menu",
+    description:
+      "Created an interactive Bash script on Ubuntu to streamline user and group management for IT administrators at Algonquin College. The tool supports secure sudo-based operations, automated logging, and input validation, enhancing efficiency for core system administration tasks. Achieved a 30% improvement in workflow efficiency using advanced scripting features such as case statements, I/O redirection, and process control.",
+    technologies: ["Bash", "Ubuntu", "Linux Shell Scripting", "Sudo", "Logging", "Process Control"],
     githubLink: "https://github.com/VedPatel2811/NYPD-Complaint-Data-Analysis",
   },
 ];
