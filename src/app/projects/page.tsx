@@ -13,66 +13,48 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "CSE Marketplace",
+    title: "Taskify Cloud",
     description:
-      "A modern web application built with React and JavaScript, featuring Auth0 for secure authentication, containerized with Minikube for local Kubernetes deployment. The backend utilized Java to dynamically convert YAML configuration files to JSON, streamlining data processing and integration.",
+      "Developing a cloud-based task management application for SMEs using Spring Boot, Angular, and MongoDB, hosted on AWS EC2 with S3 for file storage. The app supports secure user authentication, task assignment workflows, file uploads, and automated notifications. It follows Agile methodologies with version control on GitHub, and incorporates a CI/CD pipeline using Jenkins to reduce deployment time by 40%.",
     technologies: [
-      "React",
-      "JavaScript",
-      "Java",
-      "Auth0",
-      "Minikube",
-      "Kubernetes",
-      "Docker",
-    ],
-    githubLink: "https://github.com/VedPatel2811/Kubernetes",
-  },
-  {
-    title: "Full-Stack Slider App with Multi-Platform Support",
-    description:
-      "Led a 4-member team to build a Java-based application with role-based auth (Admin, REST API users, JSF users) across web (React/JSF), mobile (Kotlin), and desktop (Java Swing).",
-    technologies: [
-      "React (canvas animations)",
-      "Java",
-      "Java Swing",
-      "Kotlin",
-      "RESTful APIs",
-      "MySQL",
-      "Selenium",
-      "JUnit",
-    ],
-    githubLink: "https://github.com/VedPatel2811/Slider",
-  },
-  {
-    title: "Connect-4 Game",
-    description:
-      "Led a 2-member team to develop an object-oriented Java Swing application implementing core DSA principles for a cross-device Connect-4 game with socket-programmed multiplayer.",
-    technologies: [
-      "Java",
-      "Java Swing",
-      "Object-Oriented Programming",
-      "Socket Programming",
-      "DSA",
-      "JUnit ",
-    ],
-    githubLink: "https://github.com/VedPatel2811/Connect4",
+      "Spring Boot", "Angular", "MongoDB", "AWS (EC2, S3)", "Jenkins", "GitHub", "Agile"],
+    githubLink: "https://github.com/VedPatel2811/Taskify-Cloud",
   },
   {
     title: "Deals Finder",
     description:
-      "A dynamic web application that allows customers to subscribe/unsubscribe to food delivery services and browse exclusive deals. Implemented complex ViewModels to manage user subscriptions and deals with real-time database updates.",
-    technologies: [
-      "ASP.NET Core MVC",
-      "C#",
-      "Entity Framework",
-      "LINQ Queries",
-      "SQL Database",
-      "Azure",
-      "Razor Views",
-      "CSS",
-    ],
+      "Developed a full-stack ASP.NET Core MVC admin portal for companies to manage over 10 subscription tiers and 100+ daily deals, supporting the tracking of 1,000+ customer-deal relationships. Built the backend using C# and Entity Framework, and designed a responsive frontend with Razor Views and custom CSS. Deployed to the cloud using Azure Blob Storage and Azure SQL Database for scalability and reliability, with source control managed via GitHub.",
+    technologies: ["ASP.NET Core MVC", "C#", "Entity Framework", "Razor Views", "CSS", "Azure Blob Storage", "Azure SQL Database", "GitHub"],
+    githubLink: "https://github.com/VedPatel2811/Slider",
+  },
+  {
+    title: "Deals Finder",
+    description:
+      "Led a team of four to build a full-stack learning platform for Algonquin College students focused on RESTful APIs using React for the frontend and Java for the backend. Implemented user authentication, interactive API testing, and real-time feedback features. Developed companion mobile and desktop applications using Kotlin and Java Swing. Ensured code quality by creating over 10 JUnit and 5 Selenium tests for robust unit and UI testing.",
+    technologies: ["React", "Java", "Kotlin", "Java Swing", "JUnit", "Selenium"],
     githubLink: "https://github.com/VedPatel2811/Deals-Finder-Web-App",
     demoLink: "https://vedpatel-lab5.azurewebsites.net/",
+  },
+  {
+    title: "Book Tracking Web App",
+    description:
+      "Built a full-stack inventory management system for a local book library to manage over 1,000 books and customer loan records. Implemented advanced search and sort functionality to streamline book retrieval based on user queries. The system supports managing customer profiles, loan statuses, and book availability. Developed using PHP, JavaScript, HTML/CSS, and MySQL, delivering a responsive and functional web interface.",
+    technologies: ["PHP", "JavaScript", "HTML", "CSS", "MySQL"],
+    githubLink: "https://github.com/VedPatel2811/NYPD-Complaint-Data-Analysis",
+  },
+  {
+    title: "NYPD Complaint Data Analysis",
+    description:
+      "A data analytics project leveraging machine learning and Power BI to uncover crime patterns in NYPD complaint records.",
+    technologies: ["Power BI", "RapidMiner", "Python", "Weka", "Word", "Excel"],
+    githubLink: "https://github.com/VedPatel2811/NYPD-Complaint-Data-Analysis",
+  },
+   {
+    title: "Linux Administrative Menu",
+    description:
+      "Created an interactive Bash script on Ubuntu to streamline user and group management for IT administrators at Algonquin College. The tool supports secure sudo-based operations, automated logging, and input validation, enhancing efficiency for core system administration tasks. Achieved a 30% improvement in workflow efficiency using advanced scripting features such as case statements, I/O redirection, and process control.",
+    technologies: ["Bash", "Ubuntu", "Linux Shell Scripting", "Sudo", "Logging", "Process Control"],
+    githubLink: "https://github.com/VedPatel2811/NYPD-Complaint-Data-Analysis",
   },
 ];
 
