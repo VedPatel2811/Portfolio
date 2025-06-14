@@ -69,23 +69,21 @@ const experience = [
     company: "Communications Security Establishment Canada",
     period: "September 2024 - April 2025",
     responsibilities: [
-      "Developed a custom internal marketplace for CSE developers to streamline and securely store organizational processes, improving workflow efficiency.",
-      "Built the frontend using React and JavaScript, ensuring an intuitive and responsive user interface.",
-      "Designed and integrated Auth0-based authentication to enforce strict access controls and security compliance.",
-      "Containerized applications using Docker and orchestrated deployments on a Minikube Kubernetes cluster for scalable and reliable service management.",
-      "Assisted in setting up CI/CD pipelines to automate testing and deployment processes.",
+      "Developed an internal CSE Marketplace to securely store confidential processes, reducing information search time by 50%.",
+      "Designed a responsive, user-centric UI consistent with CSE’s visual identity using React, JavaScript, HTML/CSS, and Figma.",
+      "Integrated Auth0 for authentication, containerized the application with Docker/Kubernetes, and deployed to AWS EKS for scalable access.",
+      "Led a 4-member Agile team, using Jira to manage bi-weekly sprints, delivering a production-ready platform used by 10+ internal teams.",
     ],
   },
   {
-    title: "Backend Engineer Intern",
+    title: "Frontend Designer Intern",
     company: "Hitech Digital Solutions",
     period: "May 2022 - November 2022",
     responsibilities: [
-      "Built and maintained backend services for an admin dashboard using Node.js, implementing role-based access control (RBAC) to manage permissions for 1,000+ employees.",
-      "Optimized MongoDB queries, reducing API response times by 40% and improving system reliability.",
-      "Fixed authentication bugs and data sync issues, ensuring secure and consistent user access.",
-      "Collaborated with frontend and QA teams to streamline API integrations and deployment workflows.",
-      "Contributed to code reviews and documented backend processes to assist junior team members.",
+      "Designed intuitive web UI prototypes in Figma to modernize and replace Excel-based container tracking systems for internal use.",
+      "Developed responsive and accessible front-end components using Angular 14, Angular Material, and CSS to ensure a seamless user experience.",
+      "Worked closely with the Product Owner to collect feedback and continuously iterate on design and functionality during the product development lifecycle.",
+      "Played a key role in building a platform projected to reduce manual data entry efforts by approximately 70%, currently in active development.",
     ],
   },
 ];
@@ -109,19 +107,27 @@ const education = [
 
 const projects: Project[] = [
   {
-    title: "CSE Marketplace",
+    title: "Taskify Cloud",
     description:
-      "A modern web application built with React and JavaScript, featuring Auth0 for secure authentication, containerized with Minikube for local Kubernetes deployment.",
+      "Developing a cloud-based task management application for SMEs using Spring Boot, Angular, and MongoDB, hosted on AWS EC2 with S3 for file storage. The app supports secure user authentication, task assignment workflows, file uploads, and automated notifications. It follows Agile methodologies with version control on GitHub, and incorporates a CI/CD pipeline using Jenkins to reduce deployment time by 40%.",
     technologies: [
-      "React",
-      "JavaScript",
-      "Java",
-      "Auth0",
-      "Minikube",
-      "Kubernetes",
-      "Docker",
-    ],
-    githubLink: "https://github.com/VedPatel2811/Kubernetes",
+      "Spring Boot", "Angular", "MongoDB", "AWS (EC2, S3)", "Jenkins", "GitHub", "Agile"],
+    githubLink: "https://github.com/VedPatel2811/Taskify-Cloud",
+  },
+  {
+    title: "Deals Finder",
+    description:
+      "Developed a full-stack ASP.NET Core MVC admin portal for companies to manage over 10 subscription tiers and 100+ daily deals, supporting the tracking of 1,000+ customer-deal relationships. Built the backend using C# and Entity Framework, and designed a responsive frontend with Razor Views and custom CSS. Deployed to the cloud using Azure Blob Storage and Azure SQL Database for scalability and reliability, with source control managed via GitHub.",
+    technologies: ["ASP.NET Core MVC", "C#", "Entity Framework", "Razor Views", "CSS", "Azure Blob Storage", "Azure SQL Database", "GitHub"],
+    githubLink: "https://github.com/VedPatel2811/Slider",
+  },
+  {
+    title: "Deals Finder",
+    description:
+      "Led a team of four to build a full-stack learning platform for Algonquin College students focused on RESTful APIs using React for the frontend and Java for the backend. Implemented user authentication, interactive API testing, and real-time feedback features. Developed companion mobile and desktop applications using Kotlin and Java Swing. Ensured code quality by creating over 10 JUnit and 5 Selenium tests for robust unit and UI testing.",
+    technologies: ["React", "Java", "Kotlin", "Java Swing", "JUnit", "Selenium"],
+    githubLink: "https://github.com/VedPatel2811/Deals-Finder-Web-App",
+    demoLink: "https://vedpatel-lab5.azurewebsites.net/",
   },
   {
     title: "NYPD Complaint Data Analysis",
