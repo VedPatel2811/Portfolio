@@ -18,7 +18,6 @@ const skills = {
     { name: "Java", docs: "https://docs.oracle.com/javase/" },
     { name: "Python", docs: "https://docs.python.org/3/" },
     { name: "C", docs: "https://devdocs.io/c/" },
-    { name: "C++", docs: "https://devdocs.io/cpp/" },
     { name: "C#", docs: "https://learn.microsoft.com/en-us/dotnet/csharp/" },
     {
       name: "JavaScript",
@@ -36,8 +35,6 @@ const skills = {
     { name: "HTML", docs: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
     { name: "CSS", docs: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
     { name: "ASP.NET", docs: "https://learn.microsoft.com/en-us/aspnet/core/" },
-    { name: "Auth0", docs: "https://auth0.com/docs/" },
-    { name: "EmailJS", docs: "https://www.emailjs.com/docs/" },
   ],
   "DevOps & Cloud": [
     { name: "Docker", docs: "https://docs.docker.com/" },
@@ -65,14 +62,25 @@ const skills = {
 
 const experience = [
   {
-    title: "Volunteer Software Developer",
+    title: "Software Developer Intern",
     company: "Communications Security Establishment Canada",
     period: "September 2024 - April 2025",
     responsibilities: [
-      "Developed an internal CSE Marketplace to securely store confidential processes, reducing information search time by 50%.",
-      "Designed a responsive, user-centric UI consistent with CSE’s visual identity using React, JavaScript, HTML/CSS, and Figma.",
-      "Integrated Auth0 for authentication, containerized the application with Docker/Kubernetes, and deployed to AWS EKS for scalable access.",
-      "Led a 4-member Agile team, using Jira to manage bi-weekly sprints, delivering a production-ready platform used by 10+ internal teams.",
+      "Developed an internal CSE Marketplace to securely store confidential processes, reducing search time by 50%.",
+      "Designed a responsive, user-centric UI aligned with CSE-theme using React, JavaScript, HTML/CSS, and Figma.",
+      "Secured site with Auth0, containerized via Docker/Kubernetes, and deployed to AWS EKS for scalable access.",
+      "Led a team of 3, used Jira to deliver a platform used by 10+ CSE teams, and wrote detailed documentation.",
+    ],
+  },
+  {
+    title: "Technical Support Specialist",
+    company: " Geek Squad Best Buy",
+    period: "October 2023 - January 2024",
+    responsibilities: [
+      "Resolved 150+ tech issues for PCs, phones, and tablets, delivering fast in-store diagnostics and troubleshooting.",
+      "Assisted 20+ daily customers via walk-ins and calls, providing solutions, setup, and connectivity problems.",
+      "Achieved 90% customer satisfaction by addressing concerns and escalating complex cases when needed.",
+      "Performed diagnostics using Geek Squad tools, accurately identifying hardware/software issues for repairs.",
     ],
   },
   {
@@ -80,10 +88,10 @@ const experience = [
     company: "Hitech Digital Solutions",
     period: "May 2022 - November 2022",
     responsibilities: [
-      "Designed intuitive web UI prototypes in Figma to modernize and replace Excel-based container tracking systems for internal use.",
-      "Developed responsive and accessible front-end components using Angular 14, Angular Material, and CSS to ensure a seamless user experience.",
-      "Worked closely with the Product Owner to collect feedback and continuously iterate on design and functionality during the product development lifecycle.",
-      "Played a key role in building a platform projected to reduce manual data entry efforts by approximately 70%, currently in active development.",
+      "Created interactive UI prototypes in Figma to modernize container tracking, replacing Excel-based workflows.",
+      "Built and tested responsive frontend with Angular 13, Angular Material, and CSS to ensure consistent UX.",
+      "Collaborated with stakeholders to gather feedback and refine design and documentation during development.",
+      "Supported process improvements that reduced manual data entry workload by approximately 70%.",
     ],
   },
 ];
@@ -107,47 +115,57 @@ const education = [
 
 const projects: Project[] = [
   {
-    title: "Taskify Cloud",
+    title: "SageMedic AI",
     description:
-      "Developing a cloud-based task management application for SMEs using Spring Boot, Angular, and MongoDB, hosted on AWS EC2 with S3 for file storage. The app supports secure user authentication, task assignment workflows, file uploads, and automated notifications. It follows Agile methodologies with version control on GitHub, and incorporates a CI/CD pipeline using Jenkins to reduce deployment time by 40%.",
+      "Developed an AI healthcare platform to reduce diagnosis wait times by 40% in the medical system.Designed the platform and selected a top Hugging Face model from 20+ options for symptom analysis.",
     technologies: [
-      "Spring Boot", "Angular", "MongoDB", "AWS (EC2, S3)", "Jenkins", "GitHub", "Agile"],
-    githubLink: "https://github.com/VedPatel2811/Taskify-Cloud",
-  },
-  {
-    title: "Deals Finder",
-    description:
-      "Developed a full-stack ASP.NET Core MVC admin portal for companies to manage over 10 subscription tiers and 100+ daily deals, supporting the tracking of 1,000+ customer-deal relationships. Built the backend using C# and Entity Framework, and designed a responsive frontend with Razor Views and custom CSS. Deployed to the cloud using Azure Blob Storage and Azure SQL Database for scalability and reliability, with source control managed via GitHub.",
-    technologies: ["ASP.NET Core MVC", "C#", "Entity Framework", "Razor Views", "CSS", "Azure Blob Storage", "Azure SQL Database", "GitHub"],
-    githubLink: "https://github.com/VedPatel2811/Slider",
+      "Angular",
+      "TypeScript",
+      "Tailwind",
+      "Python FastAPI",
+      "Hugging Face",
+      "TensorFlow",
+      "Google Cloud Run",
+      "GitHub",
+    ],
+    githubLink: "https://github.com/VedPatel2811/SageMedic-AI",
   },
   {
     title: "Deals Finder",
     description:
       "Led a team of four to build a full-stack learning platform for Algonquin College students focused on RESTful APIs using React for the frontend and Java for the backend. Implemented user authentication, interactive API testing, and real-time feedback features. Developed companion mobile and desktop applications using Kotlin and Java Swing. Ensured code quality by creating over 10 JUnit and 5 Selenium tests for robust unit and UI testing.",
-    technologies: ["React", "Java", "Kotlin", "Java Swing", "JUnit", "Selenium"],
+    technologies: [
+      "React",
+      "Java",
+      "Kotlin",
+      "Java Swing",
+      "JUnit",
+      "Selenium",
+    ],
     githubLink: "https://github.com/VedPatel2811/Deals-Finder-Web-App",
     demoLink: "https://vedpatel-lab5.azurewebsites.net/",
   },
   {
-    title: "Book Tracking Web App",
+    title: "Slider App",
     description:
-      "Built a full-stack inventory management system for a local book library to manage over 1,000 books and customer loan records. Implemented advanced search and sort functionality to streamline book retrieval based on user queries. The system supports managing customer profiles, loan statuses, and book availability. Developed using PHP, JavaScript, HTML/CSS, and MySQL, delivering a responsive and functional web interface.",
-    technologies: ["PHP", "JavaScript", "HTML", "CSS", "MySQL"],
-    githubLink: "https://github.com/VedPatel2811/NYPD-Complaint-Data-Analysis",
+      "Developed a full-stack ASP.NET Core MVC admin portal for companies to manage over 10 subscription tiers and 100+ daily deals, supporting the tracking of 1,000+ customer-deal relationships. Built the backend using C# and Entity Framework, and designed a responsive frontend with Razor Views and custom CSS. Deployed to the cloud using Azure Blob Storage and Azure SQL Database for scalability and reliability, with source control managed via GitHub.",
+    technologies: [
+      "ASP.NET Core MVC",
+      "C#",
+      "Entity Framework",
+      "Razor Views",
+      "CSS",
+      "Azure Blob Storage",
+      "Azure SQL Database",
+      "GitHub",
+    ],
+    githubLink: "https://github.com/VedPatel2811/Slider",
   },
   {
     title: "NYPD Complaint Data Analysis",
     description:
       "A data analytics project leveraging machine learning and Power BI to uncover crime patterns in NYPD complaint records.",
     technologies: ["Power BI", "RapidMiner", "Python", "Weka", "Word", "Excel"],
-    githubLink: "https://github.com/VedPatel2811/NYPD-Complaint-Data-Analysis",
-  },
-   {
-    title: "Linux Administrative Menu",
-    description:
-      "Created an interactive Bash script on Ubuntu to streamline user and group management for IT administrators at Algonquin College. The tool supports secure sudo-based operations, automated logging, and input validation, enhancing efficiency for core system administration tasks. Achieved a 30% improvement in workflow efficiency using advanced scripting features such as case statements, I/O redirection, and process control.",
-    technologies: ["Bash", "Ubuntu", "Linux Shell Scripting", "Sudo", "Logging", "Process Control"],
     githubLink: "https://github.com/VedPatel2811/NYPD-Complaint-Data-Analysis",
   },
 ];
