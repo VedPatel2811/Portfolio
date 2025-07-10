@@ -62,7 +62,17 @@ const skills = {
 
 const experience = [
   {
-    title: "Software Developer Intern",
+  title: "Security Access Administrator",
+  company: "Allied Universal – Ottawa, ON",
+  period: "May 2024 - Present",
+  responsibilities: [
+    "Managed internal access control systems, key audits, and surveillance feeds using 10+ proprietary web tools.",
+    "Developed a Python automation script for key audits, reducing manual effort by 60% and improving data accuracy.",
+    "Built an internal web portal to streamline access management workflows and enhance inter-team communication.",
+    ],
+  },
+  {
+    title: "Software Developer",
     company: "Communications Security Establishment Canada",
     period: "September 2024 - April 2025",
     responsibilities: [
@@ -84,7 +94,7 @@ const experience = [
     ],
   },
   {
-    title: "Frontend Designer Intern",
+    title: "Frontend Designer",
     company: "Hitech Digital Solutions",
     period: "May 2022 - November 2022",
     responsibilities: [
